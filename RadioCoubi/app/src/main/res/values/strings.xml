@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RadioCoubi</string>
+    <string name="home">Home</string>
+    <string name="shows">Next Shows</string>
+    <string name="download">Download</string>
+    <string name="follow">Follow Us</string>
+    <string name="contact">Contact Us</string>
+    <string name="live">Live</string>
+    <string name="partner">Proud Partner : Comilla University IT Society</string>
+    <string name="title">Exit</string>
+    <string name="about">About Us</string>
+    <string name="message">Are you sure you want to leave?</string>
+</resources>

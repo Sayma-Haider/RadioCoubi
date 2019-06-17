@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/music"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:background="#FFA000">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Home"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/toolbar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            android:layout_marginLeft="150dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ViewFlipper
+        android:layout_marginTop="57dp"
+        android:id="@+id/view_id"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+        android:layout_centerHorizontal="true"</ViewFlipper>
+
+    <Button
+        android:id="@+id/showsButton_id"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_id"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="64dp"
+        android:drawableTop="@drawable/shows"
+        android:text="@string/shows"
+        />
+
+    <Button
+        android:id="@+id/aboutButton_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_id"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:background="@null"
+        android:drawableTop="@drawable/aboutus"
+        android:text="@string/about" />
+
+    <Button
+        android:id="@+id/contactButton_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginBottom="139dp"
+        android:background="@null"
+        android:drawableTop="@drawable/contact"
+        android:text="@string/contact" />
+
+    <Button
+        android:id="@+id/followButton_id"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="133dp"
+        android:background="@null"
+        android:drawableTop="@drawable/follow"
+        android:text="@string/follow" />
+
+    <Button
+        android:id="@+id/liveButton_id"
+        android:layout_width="wrap_content"
+        android:layout_height="109dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="167dp"
+        android:layout_marginLeft="167dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginRight="158dp"
+        android:layout_marginBottom="186dp"
+        android:background="@null"
+        android:drawableBottom="@drawable/live"
+        android:text="@string/live" />
+
+
+</RelativeLayout>
