@@ -10,4 +10,13 @@
     <string name="title">Exit</string>
     <string name="about">About Us</string>
     <string name="message">Are you sure you want to leave?</string>
+    <string name="txt_in_about">"রেডিও কুবি"/ " Radio Comilla University" is the only Campus Radio of Comilla University.This is an initiative of Comilla University IT Society (CoUITS) for making a true ICT sustained campus and building a better, connected community.After broadcasting several test episodes, Radio Comilla University went on its first on air program .Radio Comilla University earned its reputaion and achieved a place among everyones heart quickly.We are now taking new initiatives to connect more people with us.</string>
+    <string name="contact_info">e-mail: info@radiocou.com\n
+                                radiocou@gmail.com\n
+                                cou.itsociety@gmail.com\n
+                                Phone: +88 0177 4828 611\n
+                                Comilla University\n
+                                Salmanpur,Kotbari,Comilla-3506\n
+                                Bangladesh\n
+    </string>
 </resources>

@@ -26,11 +26,11 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/toolbar_button"
+            android:id="@+id/toolbar_image"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/logo"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="50dp"
             style="@style/Widget.AppCompat.Button.Borderless"
             />
 
@@ -40,9 +40,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="About Us"
+        android:text="@string/txt_in_about"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
         />
 
 </LinearLayout>

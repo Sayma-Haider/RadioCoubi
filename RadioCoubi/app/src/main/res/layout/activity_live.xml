@@ -30,19 +30,26 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/logo"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="80dp"
             style="@style/Widget.AppCompat.Button.Borderless"
             />
 
     </android.support.v7.widget.Toolbar>
 
 
-    <TextView
+    <Button
+        android:id="@+id/b_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Live"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="329dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="300dp"
+        android:text="PLAY"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:textColor="@android:color/background_light"
         />
 
 </LinearLayout>

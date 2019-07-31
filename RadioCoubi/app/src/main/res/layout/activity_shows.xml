@@ -1,48 +1,448 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Shows">
+    android:fillViewport="true">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        android:background="#FFA000">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#02075d"
+        tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/toolbar_title"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Next Shows"
-            android:gravity="center"
-            android:textColor="@android:color/white"
-            android:layout_marginLeft="30dp"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:background="#FFA000">
 
-        <ImageView
-            android:id="@+id/toolbar_button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/logo"
-            android:layout_marginLeft="30dp"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            />
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Next Shows"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="30dp"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-    </android.support.v7.widget.Toolbar>
+            <ImageView
+                android:id="@+id/toolbar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo"
+                android:layout_marginLeft="30dp"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
+
+        </android.support.v7.widget.Toolbar>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Shows"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
 
-</LinearLayout>
+            >
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/images"
+                android:layout_marginLeft="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Campus Adda"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="8:00 - 10:00PM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="RJ Shihab"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-40dp"
+
+            >
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/images"
+                android:layout_marginLeft="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Campus Adda"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="8:00 - 10:00PM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="RJ Shihab"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-40dp"
+
+            >
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/images"
+                android:layout_marginLeft="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Campus Adda"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="8:00 - 10:00PM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="RJ Shihab"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-40dp"
+
+            >
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/images"
+                android:layout_marginLeft="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Campus Adda"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="8:00 - 10:00PM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="RJ Shihab"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-40dp"
+
+            >
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/images"
+                android:layout_marginLeft="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Campus Adda"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="8:00 - 10:00PM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="RJ Shihab"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-40dp"
+
+            >
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/images"
+                android:layout_marginLeft="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Campus Adda"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="8:00 - 10:00PM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="RJ Shihab"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-40dp"
+
+            >
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/images"
+                android:layout_marginLeft="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Campus Adda"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="8:00 - 10:00PM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="RJ Shihab"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
