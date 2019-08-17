@@ -5,10 +5,11 @@ import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
@@ -17,16 +18,15 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewFlipper viewFlipper;
     private Button showButton,aboutButton,contactButton,followButton,liveButton;
-    private ActionBar actionBar;
+    int[] images={R.drawable.bettermujib,R.drawable.bjustbuildings,R.drawable.campus,R.drawable.cloudy,
+            R.drawable.coutre,R.drawable.flower,R.drawable.minar,R.drawable.sunset};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        int[] images = {R.drawable.bettermujib,R.drawable.campus,R.drawable.cloudy,R.drawable.coutre,
-                R.drawable.flower,R.drawable.justbuildings,R.drawable.minar,R.drawable.sunset};
 
         viewFlipper = findViewById(R.id.view_id);
 
@@ -35,10 +35,24 @@ public class MainActivity extends AppCompatActivity {
         contactButton = findViewById(R.id.contactButton_id);
         liveButton = findViewById(R.id.liveButton_id);
         followButton = findViewById(R.id.followButton_id);
-        aboutButton = findViewById(R.id.aboutButton_id);
 
-        for(int image: images)
-            flipperImages(image);
+        for(int i=0;i<images.length;i++)
+        {
+            ImageView imageView = new ImageView(this);
+            imageView.setImageResource(images[i]);
+            viewFlipper.addView(imageView);
+        }
+
+        Animation in = AnimationUtils.loadAnimation(this,android.R.anim.slide_in_left);
+        Animation out = AnimationUtils.loadAnimation(this,android.R.anim.slide_out_right);
+
+
+        viewFlipper.setInAnimation(in);
+        viewFlipper.setOutAnimation(out);
+
+        viewFlipper.setFlipInterval(5000);
+
+        viewFlipper.setAutoStart(true);
 
         listeners();
 
@@ -47,19 +61,6 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed()
     {
         showAlertDialog();
-    }
-
-    public  void flipperImages(int image)
-    {
-        ImageView imageView = new ImageView(this);
-        imageView.setBackgroundResource(image);
-
-        viewFlipper.addView(imageView);
-        viewFlipper.setFlipInterval(5000);
-        viewFlipper.setAutoStart(true);
-
-        viewFlipper.setInAnimation(this,android.R.anim.slide_in_left);
-        viewFlipper.setOutAnimation(this,android.R.anim.slide_out_right);
     }
 
     public void listeners()
@@ -84,14 +85,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 goToFacebook("285334755271050");
-            }
-        });
-
-        aboutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, About.class));
-                finish();
             }
         });
 

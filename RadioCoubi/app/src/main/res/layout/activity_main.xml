@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/music"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home"
+    android:orientation="vertical"
+    android:weightSum="3"
     tools:context=".MainActivity">
 
     <android.support.v7.widget.Toolbar
@@ -21,7 +23,7 @@
             android:text="Home"
             android:gravity="center"
             android:textColor="@android:color/white"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="50dp"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -38,86 +40,72 @@
 
 
     <ViewFlipper
-        android:layout_marginTop="57dp"
         android:id="@+id/view_id"
         android:layout_width="match_parent"
-        android:layout_height="220dp">
-        android:layout_centerHorizontal="true"</ViewFlipper>
+        android:layout_height="220dp"
+        android:layout_gravity="center_horizontal">
+    </ViewFlipper>
 
-    <Button
-        android:id="@+id/showsButton_id"
-        android:background="@null"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/liveButton_id"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@null"
+            android:drawableTop="@drawable/live"
+            android:text="@string/live"
+            android:textColor="#FFA000" />
+
+
+        <Button
+            android:id="@+id/showsButton_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:background="@null"
+            android:drawableTop="@drawable/shows"
+            android:text="@string/shows"
+            android:textColor="#FFA000" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view_id"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="64dp"
-        android:drawableTop="@drawable/shows"
-        android:text="@string/shows"
-        />
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginBottom="20dp">
 
-    <Button
-        android:id="@+id/aboutButton_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_id"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginRight="27dp"
-        android:background="@null"
-        android:drawableTop="@drawable/aboutus"
-        android:text="@string/about" />
-
-    <Button
-        android:id="@+id/contactButton_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginBottom="139dp"
-        android:background="@null"
-        android:drawableTop="@drawable/contact"
-        android:text="@string/contact" />
-
-    <Button
-        android:id="@+id/followButton_id"
-        android:layout_width="77dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="133dp"
-        android:background="@null"
-        android:drawableTop="@drawable/follow"
-        android:text="@string/follow" />
-
-    <Button
-        android:id="@+id/liveButton_id"
-        android:layout_width="wrap_content"
-        android:layout_height="109dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="167dp"
-        android:layout_marginLeft="167dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginRight="158dp"
-        android:layout_marginBottom="186dp"
-        android:background="@null"
-        android:drawableBottom="@drawable/live"
-        android:text="@string/live" />
+        <Button
+            android:id="@+id/followButton_id"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@null"
+            android:drawableTop="@drawable/follow"
+            android:text="@string/follow"
+            android:textColor="#FFA000" />
 
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/contactButton_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableTop="@drawable/contact"
+            android:text="@string/contact"
+            android:textColor="#FFA000"
+            android:layout_marginLeft="130dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
