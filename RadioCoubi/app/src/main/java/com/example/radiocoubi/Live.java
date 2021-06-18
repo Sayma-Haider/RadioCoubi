@@ -1,39 +1,29 @@
-package com.example.radiocoubi;
+package com.example.radiokoubi;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
 import java.io.IOException;
 
 public class Live extends AppCompatActivity {
-
-    ActionBar actionBar;
 
     Button b_play;
     MediaPlayer mediaPlayer;
 
     Boolean prepared = false;
     Boolean started = false;
-    String stream ="http://78.129.163.129:35642/;stream";
-
+    String stream ="http://162.210.196.140:38803/;stream";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        ActionBar ab = getSupportActionBar();
-        ab.setDisplayHomeAsUpEnabled(true);
 
         b_play = (Button) findViewById(R.id.b_play);
         b_play.setEnabled(false);
@@ -64,23 +54,6 @@ public class Live extends AppCompatActivity {
         });
     }
 
-    public void onBackPressed()
-    {
-        startActivity(new Intent(Live.this,MainActivity.class));
-        finish();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     class PlayerTask extends AsyncTask<String,Void,Boolean> {
         @Override
         protected Boolean doInBackground(String... strings) {
@@ -102,7 +75,9 @@ public class Live extends AppCompatActivity {
             b_play.setText("PLAY");
         }
 
+
     }
+
 
     @Override
     protected void onPause() {
@@ -127,5 +102,10 @@ public class Live extends AppCompatActivity {
             mediaPlayer.release();
         }
     }
-}
 
+    public void onBackPressed()
+    {
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        finish();
+    }
+}
